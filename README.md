@@ -1,4 +1,5 @@
 # github-action-pulsar
+[![YAML Lint](https://github.com/reugn/github-action-pulsar/actions/workflows/yaml-lint.yml/badge.svg)](https://github.com/reugn/github-action-pulsar/actions/workflows/yaml-lint.yml)
 
 This GitHub Action sets up [Apache Pulsar](https://pulsar.apache.org/) in standalone mode.
 
