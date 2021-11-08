@@ -1,0 +1,27 @@
+---
+name: 'Set up Apache Pulsar'
+description: 'Apache Pulsar is a cloud-native, distributed messaging and streaming platform.'
+author: 'reugn'
+branding:
+  icon: 'send'
+  color: 'blue'
+inputs:
+  version:
+    description: 'Apache Pulsar version'
+    required: false
+    default: 'latest'
+  brokerServicePort:
+    description: 'Broker data port'
+    required: false
+    default: '6650'
+  httpServerPort:
+    description: 'The HTTP server port to listen on'
+    required: false
+    default: '8080'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.version }}
+    - ${{ inputs.brokerServicePort }}
+    - ${{ inputs.httpServerPort }}
